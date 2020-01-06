@@ -46,6 +46,8 @@
 		1A09777023C3109400C5DDBF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A09776E23C3109400C5DDBF /* CustomTextField.swift */; };
 		1A09777323C3109B00C5DDBF /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A09777223C3109B00C5DDBF /* CustomFonts.swift */; };
 		1A09777723C3304600C5DDBF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A09777623C3304600C5DDBF /* HomeView.swift */; };
+		1A09777F23C38B7700C5DDBF /* TodoListHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A09777E23C38B7700C5DDBF /* TodoListHomeView.swift */; };
+		1A09778123C39F0600C5DDBF /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A09778023C39F0600C5DDBF /* AlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		1A09776E23C3109400C5DDBF /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		1A09777223C3109B00C5DDBF /* CustomFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		1A09777623C3304600C5DDBF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1A09777E23C38B7700C5DDBF /* TodoListHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListHomeView.swift; sourceTree = "<group>"; };
+		1A09778023C39F0600C5DDBF /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,8 @@
 				1A09774D23C30FEE00C5DDBF /* SignUpView.swift */,
 				1A005F1623BF0E3000DDDB7C /* ContentView.swift */,
 				1A09777623C3304600C5DDBF /* HomeView.swift */,
+				1A09777E23C38B7700C5DDBF /* TodoListHomeView.swift */,
+				1A09778023C39F0600C5DDBF /* AlertView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 				1A005F9823C1DB6600DDDB7C /* EditingTodoItemView.swift in Sources */,
 				1A005F2723BF0EB800DDDB7C /* TodoItem.swift in Sources */,
 				1A09777023C3109400C5DDBF /* CustomTextField.swift in Sources */,
+				1A09778123C39F0600C5DDBF /* AlertView.swift in Sources */,
 				1A005F3423BF1A8400DDDB7C /* DateComponents+Timepiece.swift in Sources */,
 				1A09774923C30ED800C5DDBF /* User.swift in Sources */,
 				1A005F3823BF2BFA00DDDB7C /* TodoListView.swift in Sources */,
@@ -321,6 +328,7 @@
 				1A005F3623BF24C600DDDB7C /* TodoItemView.swift in Sources */,
 				1A005F2F23BF1A8400DDDB7C /* Date.swift in Sources */,
 				1A09774C23C30F3500C5DDBF /* LoginView.swift in Sources */,
+				1A09777F23C38B7700C5DDBF /* TodoListHomeView.swift in Sources */,
 				1A005F1023BF0E3000DDDB7C /* AppDelegate.swift in Sources */,
 				1A005F3223BF1A8400DDDB7C /* SATextField.swift in Sources */,
 				1A005F1223BF0E3000DDDB7C /* SceneDelegate.swift in Sources */,

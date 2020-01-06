@@ -22,8 +22,21 @@ struct TodoListView: View {
     @State private var addingTodoItem = false
     
     var body: some View {
-        NavigationView {
-            ZStack {
+        ZStack {
+            VStack {
+                HStack {
+                    VStack {
+                        Text("Hello")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                        Text("22 person")
+                            .foregroundColor(.gray)
+                    }
+                    Spacer()
+                }
+                .padding(.leading, 100)
+                
+                
                 ScrollView {
                     ForEach(0 ..< todoItems.count, id:\.self) { index in
                         VStack {
@@ -58,20 +71,71 @@ struct TodoListView: View {
                         }
                     }
                 }
-                
-                // 右下角的添加事项的加号
-                Button(action: {
-                    // editingTodoItem取反
-                    self.addingTodoItem.toggle()
-                }) {
-                    btnAdd()
-                }.sheet(isPresented: $addingTodoItem) {
-                    AddTodoItemView()
-                     .environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
-                }.offset(x: UIScreen.main.bounds.width/2 - 70, y: UIScreen.main.bounds.height/2 - 130).animation(.spring())
+            .padding()
             }
-            .navigationBarTitle(Text("待办事项").foregroundColor(Color.white))
+            // 右下角的添加事项的加号
+            Button(action: {
+                // editingTodoItem取反
+                self.addingTodoItem.toggle()
+            }) {
+                btnAdd()
+            }.sheet(isPresented: $addingTodoItem) {
+                AddTodoItemView()
+                    .environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+            }.offset(x: UIScreen.main.bounds.width/2 - 70, y: UIScreen.main.bounds.height/2 - 130).animation(.spring())
         }
+        .padding(.top, 80)
+        .padding(.bottom, 83)
+        //        NavigationView {
+        //            ZStack {
+        //                ScrollView {
+        //                    ForEach(0 ..< todoItems.count, id:\.self) { index in
+        //                        VStack {
+        //                            HStack {
+        //                                Spacer().frame(width: 5)
+        //
+        //                                // 仅显示每一条TodoItem的detail和dueDate，不显示是否被check
+        //                                TodoItemView(checked: self.todoItems[index].checked, dueDate: self.todoItems[index].dueDate, detail: self.todoItems[index].detail, index: index)
+        //                                Spacer().frame(width: 35)
+        //
+        //                                // 显示是否被check的按钮,点击按钮即为check(删除该事项)
+        //                                Button(action: {
+        //                                    // 删除待办事项
+        //                                    let todoItem = self.todoItems[index]
+        //                                    self.managedObjectContext.delete(todoItem)
+        //                                    self.saveTodoItem()
+        //                                }) {
+        //                                    HStack {
+        //                                        Spacer()
+        //                                        VStack {
+        //                                            Spacer().frame(width: 5)
+        //                                            Image(systemName: "square")
+        //                                                .resizable()
+        //                                                .frame(width: 24, height: 24)
+        //                                                .foregroundColor(Color.gray)
+        //                                            Spacer().frame(width: 5)
+        //                                        }
+        //                                        Spacer()
+        //                                    }
+        //                                }
+        //                            }
+        //                        }
+        //                    }
+        //                }
+        //
+        //                // 右下角的添加事项的加号
+        //                Button(action: {
+        //                    // editingTodoItem取反
+        //                    self.addingTodoItem.toggle()
+        //                }) {
+        //                    btnAdd()
+        //                }.sheet(isPresented: $addingTodoItem) {
+        //                    AddTodoItemView()
+        //                     .environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+        //                }.offset(x: UIScreen.main.bounds.width/2 - 70, y: UIScreen.main.bounds.height/2 - 130).animation(.spring())
+        //            }
+        //            .navigationBarTitle(Text("待办事项").foregroundColor(Color.white))
+        //        }
     }
     
     func saveTodoItem() {
@@ -105,7 +169,7 @@ struct btnAdd: View {
 struct TodoListView_Previews: PreviewProvider {
     static var previews: some View {
         TodoListView()
-        .environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+            .environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
         
     }
 }

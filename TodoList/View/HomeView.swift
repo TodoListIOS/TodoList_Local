@@ -37,7 +37,7 @@ struct HomeView: View {// 默认展示登陆界面
                 LoginView()
                 .animation(.easeInOut)
             } else if (self.users.count == 1 && self.users[0].auth == "authorized") {
-                TodoListView()
+                TodoListHomeView()
                 .animation(.easeInOut)
             }
         }

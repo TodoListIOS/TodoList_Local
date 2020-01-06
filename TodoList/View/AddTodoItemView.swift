@@ -18,6 +18,7 @@ struct AddTodoItemView: View {
     
     @State private var newTodoItemDueDate = Date()
     @State private var newTodoItemDetail = ""
+
     
     let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()

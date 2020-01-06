@@ -28,6 +28,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 测试：以TodoListView为跳进去的主页面
 //        let loginView = LoginView().environment(\.managedObjectContext, context)
         let homeView = HomeView().environment(\.managedObjectContext, context)
+//        let alertView = AlertView().environment(\.managedObjectContext, context)
+        
+//        let menuView = MenuView(show: .constant(true)).environment(\.managedObjectContext, context)
         
 
         // Use a UIHostingController as window root view controller.

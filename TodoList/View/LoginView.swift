@@ -25,6 +25,8 @@ struct LoginView: View {
     // 记录用户是否已经注册
     @State private var alreadySignUp = false
     
+
+    
     
     var body: some View {
         ZStack{
@@ -92,16 +94,19 @@ struct LoginView: View {
                     // Button
                     //Spacer.frame(height:10)
                     Button(action: {
+                        // 注册密码找回等情况下清空输入框
                         if (self.users.count == 0) {
                             print("没有用户注册这个App")
                             self.email = ""
                             self.password = ""
                             // TODO: 跳出一个弹框：请您先注册
-                        } else if (self.users.count > 1) {
-                            self.email = ""
-                            self.password = ""
-                            print("此时不止有一名用户在本地登录APP!")
-                        } else {
+                        }
+//                        else if (self.users.count > 1) {
+//                            self.email = ""
+//                            self.password = ""
+//                            print("此时不止有一名用户在本地登录APP!")
+//                        }
+                        else {
                             let currentUser = self.users[0]
                             // 验证邮箱和密码
                             if (currentUser.email == self.email && currentUser.password == self.password) {
