@@ -15,6 +15,7 @@ struct LoginView: View {
     // 从实体中获取数据的属性
     @Environment(\.managedObjectContext) var managedObjectContext
     
+    
     // users的长度是1，就是正在使用该app的用户
     @FetchRequest(entity: User.entity(), sortDescriptors: [NSSortDescriptor(key: "username", ascending: true)]) var users: FetchedResults<User>
     
